@@ -6,7 +6,7 @@ import uglify from 'rollup-plugin-uglify' // eslint-disable-line import/extensio
 
 export default {
   entry: 'url.js',
-  exports: 'named',
+  exports: 'default',
   plugins: [
     commonjs({
       ignoreGlobal: true,
@@ -17,7 +17,7 @@ export default {
     }),
     // uglify(),
   ],
-  format: 'iife',
+  format: 'cjs',
   moduleName: 'url',
   dest: 'url.web.js', // equivalent to --output
   sourceMap: true,
