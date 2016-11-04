@@ -14,11 +14,17 @@
   "devDependencies": {
     "assert": "1.1.1",
     "mocha": "1.18.2",
+    "rollup": "^0.36.3",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-globals": "^1.0.9",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1",
     "zuul": "3.3.0"
   },
   "scripts": {
     "test": "mocha --ui qunit test.js && zuul -- test.js",
-    "test-local": "zuul --local -- test.js"
+    "test-local": "zuul --local -- test.js",
+    "build:web": "rollup -c rollup.config.js"
   },
   "repository": {
     "type": "git",
