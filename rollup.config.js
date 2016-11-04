@@ -15,9 +15,9 @@ export default {
       browser: true,
       preferBuiltins: false,
     }),
-    uglify(),
+    // uglify(),
   ],
-  format: 'cjs',
+  format: 'iife',
   moduleName: 'url',
   dest: 'url.web.js', // equivalent to --output
   sourceMap: true,
