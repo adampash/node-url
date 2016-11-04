@@ -28,14 +28,6 @@ var util = require('./util')
 // exports.resolve = urlResolve;
 // exports.resolveObject = urlResolveObject;
 // exports.format = urlFormat;
-module.exports = {
-  parse: urlParse,
-  resolve: urlResolve,
-  resolveObject: urlResolveObject,
-  format: urlFormat,
-  Url: Url,
-}
-
 function Url() {
   this.protocol = null
   this.slashes = null
@@ -293,6 +285,7 @@ Url.prototype.parse = function(url, parseQueryString, slashesDenoteHost) {
     }
 
     if (!ipv6Hostname) {
+      debugger
       // IDNA Support: Returns a punycoded representation of "domain".
       // It only converts parts of the domain name that
       // have non-ASCII characters, i.e. it doesn't matter if
@@ -735,3 +728,12 @@ Url.prototype.parseHost = function() {
   }
   if (host) this.hostname = host
 }
+
+module.exports = {
+  parse: urlParse,
+  resolve: urlResolve,
+  resolveObject: urlResolveObject,
+  format: urlFormat,
+  Url: Url,
+}
+

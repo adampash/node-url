@@ -17,7 +17,7 @@ export default {
     }),
     // uglify(),
   ],
-  format: 'cjs',
+  format: 'iife',
   moduleName: 'url',
   dest: 'url.web.js', // equivalent to --output
   sourceMap: true,
