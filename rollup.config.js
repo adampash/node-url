@@ -14,7 +14,7 @@ export default {
       browser: true,
       preferBuiltins: false,
     }),
-    // uglify(),
+    uglify(),
   ],
   format: 'iife',
   moduleName: 'url',
